@@ -1,0 +1,29 @@
+(defcfg
+  process-unmapped-keys yes
+)
+
+(defsrc
+  caps q    w     e     r     a     s     d     f     z     x
+)
+
+(defalias
+  cap  (layer-toggle nav-layer)
+  lpar (multi S-8)
+  rpar (multi S-9)
+  lbck (multi ralt f)
+  rbck (multi ralt g)
+  lcrl (multi ralt b)
+  rcrl (multi ralt n)
+  lang (multi ralt ,)
+  rang (multi ralt .)
+  equl (multi S-0)
+  qmrk (multi S--)
+)
+
+(deflayer base
+  @cap q    w     e     r     a     s     d     f     z     x
+)
+
+(deflayer nav-layer
+  _    @lpar @rpar @lbck @rbck @lcrl @rcrl @lang @rang @equl @qmrk
+)
