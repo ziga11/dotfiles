@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SNAPSHOT_DIR="$HOME/.tmux/resurrect"
+SNAPSHOT_DIR="$HOME/.local/share/tmux//resurrect"
 mkdir -p "$SNAPSHOT_DIR"
 
 DIR=$(tmux display -p -F "#{pane_current_path}")
@@ -11,7 +11,7 @@ LAST_FILE="$SNAPSHOT_DIR/last"
 OLD_TS=0
 [[ -f "$LAST_FILE" ]] && OLD_TS=$(stat -c %Y "$LAST_FILE")
 
-tmux run-shell "$HOME/.tmux/plugins/tmux-resurrect/scripts/save.sh"
+tmux run-shell "$HOME/.local/share/tmux/plugins/tmux-resurrect/scripts/save.sh"
 
 MAX_WAIT=5
 SECONDS_PASSED=0

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SNAPSHOT_DIR="$HOME/.tmux/resurrect"
+SNAPSHOT_DIR="$HOME/.local/share/tmux/resurrect"
 cd "$SNAPSHOT_DIR" || exit 1
 
 SAVE_FILES=( *.save )
@@ -20,7 +20,7 @@ for win_id in $OLD_WINDOWS; do
     tmux kill-window -t "$win_id" 2>/dev/null
 done
 
-tmux run-shell "$HOME/.tmux/plugins/tmux-resurrect/scripts/restore.sh"
+tmux run-shell "$HOME/.local/share/tmux/plugins/tmux-resurrect/scripts/restore.sh"
 
 NEW_WINDOW_COUNT=$(tmux list-windows | wc -l)
 if (( NEW_WINDOW_COUNT > 1 )); then
