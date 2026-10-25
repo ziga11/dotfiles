@@ -1,5 +1,9 @@
 #!/usr/bin/bash
-SELECTED=$(compgen -c | fzf)
+
+SELECTED=$(compgen -c | sort -u | fzf)
+
 if [[ -n "$SELECTED" ]]; then
-    tmux send-keys "tldr '$SELECTED'" C-m
+    clear
+    tldr "$SELECTED"
+    read -n 1
 fi

@@ -1,0 +1,8 @@
+{
+    "diagnostics.globals": [
+        "hl",
+        "mainMod",
+        "scriptsDir",
+        "vim"
+    ]
+}
