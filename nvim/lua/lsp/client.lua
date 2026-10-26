@@ -7,7 +7,6 @@ function M.setup(client, bufnr)
     client.server_capabilities.hoverProvider = nil
     client.server_capabilities.definitionProvider = nil
     client.server_capabilities.referencesProvider = nil
-    client.server_capabilities.renameProvider = nil
 
     client.handlers["textDocument/publishDiagnostics"] = function() end
 

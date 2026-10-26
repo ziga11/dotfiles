@@ -47,6 +47,7 @@ return {
         local servers = {
             phoenix_pulse = "phoenix-pulse",
             glint = "glint",
+            intelephense = "intelephense",
         }
 
         for server, module in pairs(servers) do
